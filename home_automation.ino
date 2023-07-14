@@ -1,14 +1,20 @@
+/*sketch for IoT based home automation system using esp32 controller and remote control using Blynk app
+   created by Paresh Kalsotra*/
+//________________________________________________________________//
+//including necessary libraries
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <BlynkSimpleEsp32.h>
+
 #define BLYNK_TEMPLATE_ID "TMPL3khVnHHHt"
 #define BLYNK_TEMPLATE_NAME "home automation"
 #define BLYNK_AUTH_TOKEN "udvQwo5t7LD168Sm23XZioYKCKz-WBIv"
 
-char auth[] = BLYNK_AUTH_TOKEN;// author token
-char ssid[] = "pk";
-char pass[] = "zxcvbnm.";
+char auth[] = BLYNK_AUTH_TOKEN; 
+char ssid[] = "WiFi ssid";
+char pass[] = "password";
 
+//defining the pins
 const int switch1Pin = 32;  
 const int switch2Pin = 33; 
 const int switch3Pin = 26; 
@@ -18,7 +24,7 @@ const int switch3Pin = 26;
 void setup()
 {
   Serial.begin(115200);
-
+// WIFI set up
   WiFi.begin(ssid, pass);
   while (WiFi.status() != WL_CONNECTED)
   {
@@ -32,21 +38,23 @@ void setup()
   // Initialize Blynk
   Blynk.begin(auth,ssid,pass);
 
-  // Configure pin modes
+  // Configuring pin modes
   pinMode(switch1Pin, OUTPUT);
   pinMode(switch2Pin, OUTPUT);
   pinMode(switch3Pin, OUTPUT);
     pinMode(sensor, INPUT); 
-  // Set initial switch states
+ 
+  //  initial switch states
   digitalWrite(switch1Pin, LOW);
   digitalWrite(switch2Pin, LOW);
   digitalWrite(switch3Pin, LOW);
 }
 
 void loop()
-{  val = digitalRead(sensor);   
+{ //reading sensor data
+ val = digitalRead(sensor);   
   if (val == HIGH) {           
-      digitalWrite(switch1Pin, HIGH);
+  digitalWrite(switch1Pin, HIGH);
   digitalWrite(switch2Pin, HIGH);
   digitalWrite(switch3Pin, HIGH); 
     delay(200);                
