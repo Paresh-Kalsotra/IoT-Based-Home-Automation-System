@@ -6,4 +6,13 @@ One of the core features of this system is the utilization of a Passive Infrared
 This automatic lighting functionality ensures that the lights are only active when someone is present, promoting energy efficiency, conserving energy and reducing unnecessary electricity consumption.
 By combining the power of the ESP32 controller, Blynk app, and PIR sensor, this home automation system streamlines the control of home appliances and optimizes the lighting system, making it more intelligent and responsive to the presence of individuals in the home. 
 # Hardware components Used:
+1.	Arduino UNO
+2.	ESP32
+3.	Jumper Wires
+4.	4 -channel Relay Module
+5.	Jumper wires
+6.	Switch board
+7.	Light bulb and others
+
+
 
