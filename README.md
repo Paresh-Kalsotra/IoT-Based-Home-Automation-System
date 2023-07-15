@@ -15,6 +15,7 @@ By combining the power of the ESP32 controller, Blynk app, and PIR sensor, this 
 7.	Light bulb and others
 # Software setup:
 1.	Wrote a sketch on the Arduino IDE and uploaded it  on the esp32.
-2.	Created a blynk template
+2.	Used the blynk app to create virtual switches, to remotely control the appliances.
+
 
 	
