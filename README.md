@@ -13,6 +13,4 @@ By combining the power of the ESP32 controller, Blynk app, and PIR sensor, this 
 5.	Jumper wires
 6.	Switch board
 7.	Light bulb and others
-
-
-
+8.	
