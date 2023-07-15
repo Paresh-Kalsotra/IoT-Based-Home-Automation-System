@@ -21,6 +21,9 @@ By combining the power of the ESP32 controller, Blynk app, and PIR sensor, this 
 
 # Blynk interface:
 **Blynk template and Device for virtual switches**
+
 ![Screenshot (404)](https://github.com/Paresh-Kalsotra/IoT-Based-Home-Automation-System/assets/83598734/8d8259b1-98c2-4cf2-9b65-ae5f25b81508)
+
 ![Screenshot (402)](https://github.com/Paresh-Kalsotra/IoT-Based-Home-Automation-System/assets/83598734/62056c27-75f5-463a-9105-d18801e99a78)
+
 ![Screenshot (405)](https://github.com/Paresh-Kalsotra/IoT-Based-Home-Automation-System/assets/83598734/db12a15e-eca6-4c6d-986d-b7141adbbf5e)
