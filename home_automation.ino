@@ -1,4 +1,4 @@
-/*sketch for IoT based home automation system using esp32 controller and remote control using Blynk app
+/*sketch for IoT based home automation system using esp32 controller, PIR sensor and remote control using Blynk app
    created by Paresh Kalsotra*/
 
 //________________________________________________________________//
@@ -25,6 +25,7 @@ const int switch3Pin = 26;
 void setup()
 {
   Serial.begin(115200);
+   
 // WIFI set up
   WiFi.begin(ssid, pass);
   while (WiFi.status() != WL_CONNECTED)
@@ -43,7 +44,7 @@ void setup()
   pinMode(switch1Pin, OUTPUT);
   pinMode(switch2Pin, OUTPUT);
   pinMode(switch3Pin, OUTPUT);
-    pinMode(sensor, INPUT); 
+  pinMode(sensor, INPUT); 
  
   //  initial switch states
   digitalWrite(switch1Pin, LOW);
@@ -52,22 +53,35 @@ void setup()
 }
 
 void loop()
-{ //reading sensor data
+{  Blynk.run();
+ 
+ //reading sensor data
  val = digitalRead(sensor);   
-  if (val == HIGH) {           
+  if (val == HIGH) {    
+  //trigerring physical pin   
   digitalWrite(switch1Pin, HIGH);
   digitalWrite(switch2Pin, HIGH);
   digitalWrite(switch3Pin, HIGH); 
+
+ //updating virtual pin on blynk app
+   Blynk.virtualWrite(V0, HIGH);
+   Blynk.virtualWrite(V1, HIGH);
+   Blynk.virtualWrite(V2, HIGH);
     delay(200);                
  
   } 
   else {
+   //trigerring physical pin
   digitalWrite(switch1Pin, LOW);
   digitalWrite(switch2Pin, LOW);
   digitalWrite(switch3Pin, LOW);
+
+   //updating virtual pin on blynk app
+   Blynk.virtualWrite(V0, LOW);
+   Blynk.virtualWrite(V1, LOW);
+   Blynk.virtualWrite(V2, LOW);
       delay(200);        
   }
-  Blynk.run();
 }
 
 // Virtual pin handler for bulb 1
