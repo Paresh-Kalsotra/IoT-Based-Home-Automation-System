@@ -19,6 +19,12 @@ By combining the power of the ESP32 controller, Blynk app, and PIR sensor, this 
 1.	Wrote a sketch on the Arduino IDE and uploaded it  on the esp32.
 2.	Used the blynk app to create virtual switches, to remotely control the appliances.
 
+
+# Circuit diagrams:
+Circuit diqgram of the implemented system 
+![image](https://github.com/Paresh-Kalsotra/IoT-Based-Home-Automation-System/assets/83598734/b963515f-b165-4c35-a1fe-2b8b2e9e66dd)
+
+
 # Blynk interface:
 **Blynk template and Device for virtual switches**
 
