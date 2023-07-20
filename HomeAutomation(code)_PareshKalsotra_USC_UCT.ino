@@ -1,4 +1,4 @@
-/*sketch for IoT based home automation system using esp32 controller, PIR sensor and remote control using Blynk app
+/*IoT based home automation system using esp32 controller, PIR sensor and remote control using Blynk app
    created by Paresh Kalsotra*/
 
 //________________________________________________________________//
